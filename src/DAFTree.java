@@ -258,6 +258,7 @@ public class DAFTree<K extends Comparable<? super K>, D> implements Iterable {
                 unielems.add(key);
             } else if (temp.count <= 0) { // if ncopy is 0 remove the whole node
                 this.nElems -= temp.count;
+                temp.count = 0;
                 unielems.remove(key);
                 removenode((K) temp.key);
             }
